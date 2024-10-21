@@ -1,0 +1,10 @@
+#animated{
+    background: url('../../images/otro2.webp');
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    ;
+
+    background-size: contain;
+    background-position: center;
+}
