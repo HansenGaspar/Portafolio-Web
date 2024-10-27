@@ -1,0 +1,27 @@
+@font-face {
+    font-family: 'bebas';
+    src: url('./tipografias/BebasNeue-Regular.ttf');
+}
+@font-face {
+    font-family: 'Dela';
+    src: url('./tipografias/DelaGothicOne-Regular.ttf');
+    font-weight: 10;
+}
+@font-face {
+    font-family: 'Love';
+    src: url('./tipografias/LoveYaLikeASister-Regular.ttf');
+}
+@font-face {
+    font-family: 'Slackey';
+    src: url('./tipografias/Slackey-Regular.ttf');
+    font-weight: 50;
+
+}
+@font-face {
+    font-family: 'Galindo';
+    src: url('./tipografias/Galindo-Regular.ttf');
+}
+@font-face {
+    font-family: 'Dongle';
+    src: url('./tipografias/Dongle-Light.ttf');
+}

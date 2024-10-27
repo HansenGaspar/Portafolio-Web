@@ -1,0 +1,23 @@
+.projectBox {
+    background-color: #f5f5dc;
+}
+
+.tituloProyect{
+    font-family: 'Galindo';
+}
+.textProyect{
+    font-family: 'Dongle';
+    font-size: 2rem;
+    line-height: 2rem;
+}
+
+.clickeable{
+    cursor: pointer;
+    font-family: 'Galindo';
+    font-size: 1rem;
+}
+
+.resaltar{
+    font-family: 'Galindo';
+    font-size: 1rem;
+}

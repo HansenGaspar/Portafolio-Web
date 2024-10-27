@@ -1,17 +1,38 @@
 
-import EstudyBox from './estudyBox.jsx';
+import EstudyBox from './components/estudyBox.jsx';
+import AboutMe from './components/AboutMe.jsx';
+import ContactMe from './components/ContactMe.jsx';
+
+import './Info.css';
+
+import H2Tittle from '../../components/H2Tittle.jsx';
+import H3Tittle from '../../components/H3Tittle.jsx';
+
+//  Importar Jsons
+import Facultad from '../../json/Estudios/Facultad.json';
+import Liceo from '../../json/Estudios/Liceo.json';
 
 function personalInfo() {
     return (
         <div className="App mx-4">
-            <h2 className="text-3xl">Informacion Personal</h2>
-            <h3 className="text-2xl m-2">Sobre mi</h3>
-            <h3 className="text-2xl m-2">Estudios</h3>
-            <div className='flex flex-row m-2 gap-2'>
-            <EstudyBox Nombre={"Estudio 1"} fecha={"2020-2021"} descrip={"Descripción"}/>
-            <EstudyBox Nombre={"Estudio 2"} fecha={"2020-2021"} descrip={"Descripción"}/>
+            <H2Tittle>Sobre mi</H2Tittle>
+
+            <div className=' grid grid-cols-1 md:grid-cols-2 my-4'>
+                <AboutMe />
+
+                <div className='px-4'>
+                    <H3Tittle>Estudios</H3Tittle>
+
+                    <div className='flex flex-col lg:flex-row m-2 gap-2 '>
+                        <EstudyBox data={Facultad} />
+                        <EstudyBox data={Liceo} />
+                    </div>
+
+                </div>
+
             </div>
-            <h3 className="text-2xl m-2">Contacto</h3>
+            <H2Tittle>Contacto</H2Tittle>
+            <ContactMe />
         </div>
     )
 }

@@ -1,0 +1,14 @@
+{
+    "Nombre": "Ultra Notificaciones",
+    "Descripcion": "Desarrollé una aplicación web que permite a los usuarios registrarse y suscribirse a un sistema de notificaciones. Los administradores pueden crear notificaciones, que son enviadas automáticamente a los usuarios suscritos.",
+    "Tecnologias": [
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "Firebase (Hosting, messaging, Database)",
+        "node.js",
+        "Express JS",
+        "Firebase Functions"
+    ],
+    "Url": "https://ultra-notificaciones.firebaseapp.com/"
+}

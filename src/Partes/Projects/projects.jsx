@@ -1,12 +1,19 @@
 import ProjectBox from './projectBox.jsx';
+import './projects.css';
+
+import H2Tittle from '../../components/H2Tittle.jsx';
+
+//  Importar Jsons
+import UltraNoti from '../../json/Proyectos/UltraNoti.json';
+import Fakebook from '../../json/Proyectos/Fakebook.json';
 
 function projects() {
     return (
-        <div className="App mx-4">
-            <h2 className='text-3xl'>Proyectos</h2>
+        <div className="projects mx-4 App">
+            <H2Tittle>Proyectos</H2Tittle>
             <div className='flex flex-col m-2 gap-2'>
-            <ProjectBox nombre={"Proyecto 1"} descrip={"Descripción"} url={""} />
-            <ProjectBox nombre={"Proyecto 2"} descrip={"Descripción"} url={""} />
+            <ProjectBox data={UltraNoti} />
+            <ProjectBox data={Fakebook} />
             </div>
         </div>
     )

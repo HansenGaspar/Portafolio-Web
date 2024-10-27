@@ -1,0 +1,13 @@
+{
+    "Nombre": "Fakebook 2",
+    "Descripcion": "Desarrollé un tablero de publicaciones donde los usuarios pueden registrarse, crear mensajes y visualizar publicaciones de otros usuarios.",
+    "Tecnologias": [
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "React",
+        "Tailwind css",
+        "Firebase (Hosting, Database)"
+    ],
+    "Url": "https://facebook-2-cf6af.web.app/"
+}
