@@ -1,0 +1,16 @@
+{
+    "Nombre": "Busca Productores",
+    "Descripcion": "Web para buscar, filtrar y contactar productores de alimentos locales en tu región.",
+    "Tecnologias": [
+        "Vue.js",
+        "Node.js",
+        "Express",
+        "MongoDB",
+        "Tailwind CSS"
+    ],
+    "Url": "https://buscaproductores.example.com/",
+    "Imagenes": [
+        "Busca_Productores_1.jpg",
+        "Busca_Productores_2.jpg"
+    ]
+}

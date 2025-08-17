@@ -1,0 +1,18 @@
+{
+    "Nombre": "Better SID",
+    "Descripcion": "Aplicación web para mejorar la experiencia de uso del Sistema de Información Docente (SID) con interfaz moderna. Utiliza puppeteer para manejar el login y las busquedas, el usuario solo tiene que resolver el captcha. Como maneja datos sensibles, no adjunto link.",
+    "Tecnologias": [
+        "React",
+        "Next.js",
+        "Node.js",
+        "Express",
+        "MongoDB",
+        "Tailwind CSS",
+        "Puppeteer"
+    ],
+    "Imagenes": [
+        "Better SID_1.jpg",
+        "Better SID_2.jpg",
+        "Better SID_3.jpg"
+    ]
+}

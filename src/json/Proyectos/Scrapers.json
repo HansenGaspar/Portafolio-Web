@@ -1,0 +1,16 @@
+{
+    "Nombre": "Scrapers",
+    "Descripcion": "Herramienta web para extraer y visualizar datos de diferentes sitios automáticamente.",
+    "Tecnologias": [
+        "Python",
+        "Flask",
+        "BeautifulSoup",
+        "React",
+        "Bootstrap"
+    ],
+    "Url": "https://scrapers.example.com/",
+    "Imagenes": [
+        "Scrapers_1.jpg",
+        "Scrapers_2.jpg"
+    ]
+}

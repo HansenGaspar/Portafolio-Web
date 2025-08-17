@@ -8,7 +8,7 @@ import Projects from './Partes/Projects/projects.jsx';
 function App() {
 
   return (
-    <div className='App lg:px-16 2xl:px-64'>
+    <div className='App lg:px-16 lg:max-w-7xl mx-auto'>
       <Tittle />
 
       <div className='flex flex-col items-center space-y-2'>
