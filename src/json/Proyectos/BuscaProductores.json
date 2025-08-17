@@ -1,16 +1,17 @@
 {
     "Nombre": "Busca Productores",
-    "Descripcion": "Web para buscar, filtrar y contactar productores de alimentos locales en tu región.",
+    "Descripcion": "Desarrollé una aplicación web que permite realizar búsquedas mediante full text search, devolviendo los productores más relevantes según los términos ingresados. La aplicación ofrece la opción de descargar los resultados en formato Excel. Además, permite cargar un archivo Excel con múltiples nombres para búsqueda, generando un Excel con todos los resultados correspondientes. El sistema se conecta a una base de datos de Algolia a través de un backend desarrollado en Python.",
     "Tecnologias": [
-        "Vue.js",
-        "Node.js",
-        "Express",
-        "MongoDB",
+        "TypeScript",
+        "Next.js",
+        "Python",
+        "Algolia",
         "Tailwind CSS"
     ],
-    "Url": "https://buscaproductores.example.com/",
     "Imagenes": [
-        "Busca_Productores_1.jpg",
-        "Busca_Productores_2.jpg"
+        "Busca Productores_1.jpg",
+        "Busca Productores_2.jpg",
+        "Busca Productores_3.jpg",
+        "Busca Productores_4.jpg"
     ]
 }

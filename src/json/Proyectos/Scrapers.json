@@ -1,16 +1,13 @@
 {
     "Nombre": "Scrapers",
-    "Descripcion": "Herramienta web para extraer y visualizar datos de diferentes sitios automáticamente.",
+    "Descripcion": "Hice varios Web Scrapers para extraer y visualizar datos de diferentes sitios de venta de productos. Utilizo Puppeteer para manejar la navegación y extracción de datos, que luego son guardados como un csv, permitiendo ser transformado en un Excel.",
     "Tecnologias": [
-        "Python",
-        "Flask",
-        "BeautifulSoup",
-        "React",
-        "Bootstrap"
+        "Express",
+        "Puppeteer"
     ],
-    "Url": "https://scrapers.example.com/",
     "Imagenes": [
         "Scrapers_1.jpg",
-        "Scrapers_2.jpg"
+        "Scrapers_2.jpg",
+        "Scrapers_3.jpg"
     ]
 }
