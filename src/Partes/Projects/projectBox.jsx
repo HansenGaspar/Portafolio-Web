@@ -1,12 +1,22 @@
 
 import './projectBox.css';
 import { Carousel } from 'react-responsive-carousel';
-import { useRef, useState } from 'react';
+import { useRef, useState, useEffect } from 'react';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 
 function ProjectBox({ data }) {
     const imgRef = useRef([]);
     const [validImages, setValidImages] = useState([]);
+    const [modalOpen, setModalOpen] = useState(false);
+    const [modalImg, setModalImg] = useState(null);
+
+    // Debug: mostrar cambios de modalOpen y modalImg en window para inspección
+    useEffect(() => {
+        if (typeof window !== 'undefined') {
+            window.__debug_modalOpen = modalOpen;
+            window.__debug_modalImg = modalImg;
+        }
+    }, [modalOpen, modalImg]);
 
     let tecnologias = '';
     for (let i = 0; i < data.Tecnologias.length; i++) {
@@ -42,11 +52,10 @@ function ProjectBox({ data }) {
     let imagesToShow = (validImages.length === images.length && images.length > 0) ? sortByNumber(validImages) : images;
 
     return (
-        <div className="projectBox m-2 p-2 border-2 border-black rounded">
+        <div className="projectBox m-2 p-2 border-2 border-black rounded relative">
             <p className="tituloProyect text-3xl text-[#E8E4CC] bg-[#201C1C] rounded p-2">{data.Nombre}</p>
 
             <div className="flex flex-col md:flex-row gap-4 items-stretch">
-
                 {/* Descripción */}
                 <div className="md:w-1/2 w-full flex flex-col justify-center">
                     <p className='textProyect py-1'>{data.Descripcion}</p>
@@ -91,18 +100,25 @@ function ProjectBox({ data }) {
                             }
                         >
                             {imagesToShow.map((img, idx) => (
-                                <div key={idx} className="h-56 md:h-80 flex items-center justify-center bg-[#e8e4cc] rounded overflow-hidden">
+                                <div
+                                    key={idx}
+                                    className="h-56 md:h-80 flex items-center justify-center bg-[#e8e4cc] rounded overflow-hidden cursor-zoom-in"
+                                    onClick={e => {
+                                        e.stopPropagation();
+                                        setModalImg(img);
+                                        setModalOpen(true);
+                                        //console.log('DIV clickeado:', img);
+                                    }}
+                                >
                                     <img
                                         ref={el => imgRef.current[idx] = el}
                                         src={img}
                                         alt={`project-img-${idx}`}
-                                        className="object-cover w-full h-full rounded transition-all duration-300 cursor-zoom-in"
+                                        className="object-cover w-full h-full rounded transition-all duration-300 pointer-events-none"
                                         onError={() => {
-                                            // Si la imagen no carga, la quitamos del array
                                             setValidImages(prev => prev.filter(i => i !== img));
                                         }}
                                         onLoad={() => {
-                                            // Si la imagen carga y aún no está en el array, la agregamos
                                             setValidImages(prev => prev.includes(img) ? prev : [...prev, img]);
                                         }}
                                     />
@@ -112,6 +128,18 @@ function ProjectBox({ data }) {
                     </div>
                 )}
             </div>
+
+            {/* Modal flotante para imagen, renderizado al final para evitar stacking context del carrusel */}
+            {modalOpen && modalImg && (
+                <div className="fixed inset-0 z-[9999] flex items-center justify-center bg-black bg-opacity-80" onClick={() => setModalOpen(false)}>
+                    <div className="relative max-w-5xl w-[120vw] max-h-[120vh] flex items-center justify-center" onClick={e => e.stopPropagation()}>
+                        <button onClick={() => setModalOpen(false)} className="absolute top-2 right-2 text-white text-3xl font-bold bg-black bg-opacity-60 rounded-full w-10 h-10 flex items-center justify-center hover:bg-opacity-90 transition-all">&times;</button>
+                        <img src={modalImg} alt="Imagen ampliada" className="max-w-full max-h-[95vh] rounded shadow-lg" />
+                    </div>
+                </div>
+            )}
+
+
         </div>
     )
 }
