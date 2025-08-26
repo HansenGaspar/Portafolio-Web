@@ -25,3 +25,11 @@
     font-family: 'Dongle';
     src: url('./tipografias/Dongle-Light.ttf');
 }
+@font-face {
+    font-family: 'Pixel';
+    src: url('./tipografias/PIXELADE.ttf');
+}
+@font-face {
+    font-family: 'BigPixel';
+    src: url('./tipografias/pixel.ttf');
+}

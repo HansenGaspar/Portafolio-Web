@@ -2,6 +2,7 @@ import ProjectBox from './projectBox.jsx';
 import './projects.css';
 
 import H2Tittle from '../../components/H2Tittle.jsx';
+import { FaFolderOpen } from 'react-icons/fa';
 
 //  Importar Jsons
 import UltraNoti from '../../json/Proyectos/UltraNoti.json';
@@ -13,14 +14,17 @@ import BuscaProductores from '../../json/Proyectos/BuscaProductores.json';
 function projects() {
     return (
         <div className="projects mx-4 App">
-            <H2Tittle>Proyectos</H2Tittle>
+
+            <H2Tittle>
+                <span className="inline-flex items-center gap-2"><FaFolderOpen size={50} className="text-base" />Proyectos</span>
+            </H2Tittle>
+
             <div className='flex flex-col m-2 gap-2'>
                 <ProjectBox data={BuscaProductores} />
                 <ProjectBox data={BetterSID} />
                 <ProjectBox data={Fakebook} />
                 <ProjectBox data={UltraNoti} />
                 <ProjectBox data={Scrapers} />
-
             </div>
         </div>
     )

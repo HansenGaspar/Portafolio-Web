@@ -3,20 +3,26 @@ import { FaLinkedin, FaGithub } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
 
 function getIcon(texto) {
-    if (texto.toLowerCase().includes("linkedin")) return <FaLinkedin className="w-8 h-8 text-blue-700" />;
-    if (texto.toLowerCase().includes("github")) return <FaGithub className="w-8 h-8 text-black" />;
-    if (texto.toLowerCase().includes("mail")) return <MdEmail className="w-8 h-8 text-red-500" />;
+    if (texto.toLowerCase().includes("linkedin")) return <FaLinkedin className="w-7 h-7 text-black" />;
+    if (texto.toLowerCase().includes("github")) return <FaGithub className="w-7 h-7 text-black" />;
+    if (texto.toLowerCase().includes("mail")) return <MdEmail className="w-7 h-7 text-black" />;
     return null;
 }
 
 function ContactBox({data}) {
     return (
-        <div className="m-2 p-2 border-4 border-[#f30c5d] bg-[#f5f5dc] rounded flex flex-row gap-2 mx-auto ml-4" >
-            <p className="textProyect">{data.Texto}</p>
-            <a href={data.Url} className="text-blue-500 hover:bg-[#f30c5d] hover:rounded" target="_blank" rel="noopener noreferrer">
+        <a
+            href={data.Url}
+            className="m-2 p-2 border-4 border-[#201c1c] bg-[#f5f5dc] flex flex-row items-center gap-2 mx-auto transition duration-200 hover:bg-[#f30c5d] hover:text-white hover:shadow-lg cursor-pointer"
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{ textDecoration: 'none' }}
+        >
+            <span className="flex items-center gap-2">
                 {getIcon(data.Texto)}
-            </a>
-        </div>
+                <span className="textProyect">{data.Texto}</span>
+            </span>
+        </a>
     )
 }
 

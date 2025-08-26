@@ -52,14 +52,17 @@ function ProjectBox({ data }) {
     let imagesToShow = (validImages.length === images.length && images.length > 0) ? sortByNumber(validImages) : images;
 
     return (
-        <div className="projectBox m-2 p-2 border-2 border-black rounded relative">
-            <p className="tituloProyect text-3xl text-[#E8E4CC] bg-[#201C1C] rounded p-2">{data.Nombre}</p>
+        <div className="projectBox m-2 border-4 border-black relative overflow-visible mb-10">
 
-            <div className="flex flex-col md:flex-row gap-4 items-stretch">
+            <div className="h-14 bg-[#201C1C]   flex items-center justify-center">
+                <span className="tituloProyect  text-3xl text-[#E8E4CC] w-full text-center select-none">{data.Nombre}</span>
+            </div>
+
+            <div className="flex flex-col md:flex-row gap-4 items-stretch ">
                 {/* Descripción */}
-                <div className="md:w-1/2 w-full flex flex-col justify-center">
+                <div className="md:w-1/2 w-full flex flex-col justify-center p-2 pl-4">
                     <p className='textProyect py-1'>{data.Descripcion}</p>
-                    <p className='textProyect py-1'><span className='text-purple-700 resaltar'>Tecnologias:</span> {tecnologias}</p>
+                    <p className='textProyect p-2 bg-[#ffd44c] border-2 border-[#201C1C] '><span className='text-purple-700 resaltar'>Tecnologias - </span> {tecnologias}</p>
                     {data.Url && (
                         <p className='textProyect py-1'>
                             <span className='text-purple-700 resaltar'>Link: </span>
@@ -69,52 +72,75 @@ function ProjectBox({ data }) {
                         </p>
                     )}
                 </div>
-                {/* Línea divisoria */}
-                <div className="w-full flex md:hidden my-2">
-                    <hr className="w-full border-t-2 border-[#201C1C] opacity-100" />
-                </div>
-                <div className="hidden md:flex h-auto items-stretch mx-2">
-                    <div className="border-l-2 border-[#201C1C]  h-full" style={{ minHeight: '180px' }}></div>
-                </div>
+
+
                 {/* Carrusel solo si hay imágenes */}
                 {imagesToShow.length > 0 && (
-                    <div className="md:w-1/2 w-full flex items-center justify-center">
+                    <div className="md:w-1/2 w-full flex items-center justify-center bg-[#201C1C] border-t-4 md:border-t-0 md:border-l-4 border-[#201C1C] p-0 m-0 min-h-56 md:min-h-80">
                         <Carousel
                             showThumbs={false}
                             infiniteLoop={true}
                             showStatus={false}
-                            className="rounded w-full custom-carousel"
+                            className="w-full h-full custom-carousel flex-1"
                             renderArrowPrev={(onClickHandler, hasPrev, label) =>
                                 hasPrev && (
-                                    <button type="button" onClick={onClickHandler} title={label} className="absolute left-2 top-1/2 z-10 bg-black bg-opacity-80 text-white rounded-full w-8 h-8 flex items-center justify-center focus:outline-none">
-                                        &#8592;
+                                    <button
+                                        type="button"
+                                        onClick={onClickHandler}
+                                        title={label}
+                                        className="absolute left-2 top-1/2 z-10 bg-white border-2 border-black text-black rounded-full w-10 h-10 flex items-center justify-center shadow-lg hover:bg-black hover:text-white transition-colors duration-200 focus:outline-none"
+                                        style={{ transform: 'translateY(-50%)' }}
+                                    >
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polyline points="15 18 9 12 15 6" /></svg>
                                     </button>
                                 )
                             }
                             renderArrowNext={(onClickHandler, hasNext, label) =>
                                 hasNext && (
-                                    <button type="button" onClick={onClickHandler} title={label} className="absolute right-2 top-1/2 z-10 bg-black bg-opacity-80 text-white rounded-full w-8 h-8 flex items-center justify-center focus:outline-none">
-                                        &#8594;
+                                    <button
+                                        type="button"
+                                        onClick={onClickHandler}
+                                        title={label}
+                                        className="absolute right-2 top-1/2 z-10 bg-white border-2 border-black text-black rounded-full w-10 h-10 flex items-center justify-center shadow-lg hover:bg-black hover:text-white transition-colors duration-200 focus:outline-none"
+                                        style={{ transform: 'translateY(-50%)' }}
+                                    >
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polyline points="9 6 15 12 9 18" /></svg>
                                     </button>
                                 )
                             }
+                            renderIndicator={(onClick, isSelected, index, label) => {
+                                return (
+                                    <li
+                                        key={index}
+                                        className={
+                                            isSelected
+                                                ? "inline-block w-3 h-3 mx-1 rounded-full bg-black"
+                                                : "inline-block w-3 h-3 mx-1 rounded-full bg-black opacity-30 cursor-pointer"
+                                        }
+                                        onClick={onClick}
+                                        aria-label={label}
+                                        role="button"
+                                        tabIndex={0}
+                                        style={{ listStyle: 'none' }}
+                                    />
+                                );
+                            }}
                         >
                             {imagesToShow.map((img, idx) => (
                                 <div
                                     key={idx}
-                                    className="h-56 md:h-80 flex items-center justify-center bg-[#e8e4cc] rounded overflow-hidden cursor-zoom-in"
+                                    className="w-full h-56 md:h-80 flex items-center justify-center bg-[#e8e4cc] rounded-none overflow-hidden cursor-zoom-in p-0 m-0"
                                     onClick={e => {
                                         e.stopPropagation();
                                         setModalImg(img);
                                         setModalOpen(true);
-                                        //console.log('DIV clickeado:', img);
                                     }}
                                 >
                                     <img
                                         ref={el => imgRef.current[idx] = el}
                                         src={img}
                                         alt={`project-img-${idx}`}
-                                        className="object-cover w-full h-full rounded transition-all duration-300 pointer-events-none"
+                                        className="object-cover w-full h-full rounded-none transition-all duration-300 pointer-events-none p-0 m-0"
                                         onError={() => {
                                             setValidImages(prev => prev.filter(i => i !== img));
                                         }}
