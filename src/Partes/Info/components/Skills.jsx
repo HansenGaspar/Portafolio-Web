@@ -7,7 +7,7 @@ function Skills() {
     return (
         <>
 
-            <div className="m-4 p-4 bg-[#986cbc] border-4 border-[#201c1c] shadow-md">
+            <div className="md:m-4 p-4 bg-[#986cbc] border-y-4 md:border-4 border-[#201c1c] shadow-md">
                 <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-6 place-items-center">
                     <SkillBox nombre="HTML" icon={<FaHtml5 className="text-black text-4xl" />} />
                     <SkillBox nombre="CSS" icon={<FaCss3Alt className="text-black text-4xl" />} />

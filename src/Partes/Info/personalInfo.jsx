@@ -24,7 +24,7 @@ function personalInfo() {
     return (
         <div className="App mx-4">
             {/* Sección Sobre mí */}
-            <div className="mb-8">
+            <div className="md:mb-8">
                 <H2Tittle>
                     <span className="inline-flex items-center gap-2"><FaUser size={size} className="text-base" />Sobre mí</span>
                 </H2Tittle>
@@ -36,7 +36,7 @@ function personalInfo() {
                     </div>
 
                     {/* Estudios alineado con About Me */}
-                    <div className="md:col-span-1 flex flex-col justify-center h-full bg-[#348aa7] border-4 border-[#201c1c]  p-4">
+                    <div className="md:col-span-1 flex flex-col justify-center h-full bg-[#348aa7] border-y-4 md:border-4 border-[#201c1c]  p-4 md:m-0">
                         <H3Tittle className="mb-2">
                             <span className="inline-flex items-center gap-2"><FaGraduationCap size={size} className="text-base" />Estudios</span>
                         </H3Tittle>

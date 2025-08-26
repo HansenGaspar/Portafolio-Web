@@ -13,7 +13,7 @@ import BuscaProductores from '../../json/Proyectos/BuscaProductores.json';
 
 function projects() {
     return (
-        <div className="projects mx-4 App">
+        <div className="projects md:mx-4 ">
 
             <H2Tittle>
                 <span className="inline-flex items-center gap-2"><FaFolderOpen size={50} className="text-base" />Proyectos</span>

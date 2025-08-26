@@ -18,7 +18,7 @@ function ContactBox({data}) {
             rel="noopener noreferrer"
             style={{ textDecoration: 'none' }}
         >
-            <span className="flex items-center gap-2">
+            <span className="flex items-center gap-2 font-bold">
                 {getIcon(data.Texto)}
                 <span className="textProyect">{data.Texto}</span>
             </span>

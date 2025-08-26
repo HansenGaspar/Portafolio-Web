@@ -61,10 +61,10 @@ function ProjectBox({ data }) {
             <div className="flex flex-col md:flex-row gap-4 items-stretch ">
                 {/* Descripción */}
                 <div className="md:w-1/2 w-full flex flex-col justify-center p-2 pl-4">
-                    <p className='textProyect py-1'>{data.Descripcion}</p>
-                    <p className='textProyect p-2 bg-[#ffd44c] border-2 border-[#201C1C] '><span className='text-purple-700 resaltar'>Tecnologias - </span> {tecnologias}</p>
+                    <p className='textProyect py-1 pb-5 font-bold'>{data.Descripcion}</p>
+                    <p className='textProyect p-2 bg-[#ffd44c] border-2 border-[#201C1C] font-medium'><span className='text-purple-700 resaltar font-normal '>Tecnologias - </span> {tecnologias}</p>
                     {data.Url && (
-                        <p className='textProyect py-1'>
+                        <p className='textProyect py-1 pt-5'>
                             <span className='text-purple-700 resaltar'>Link: </span>
                             <a href={data.Url} className='text-blue-500' target="_blank" rel="noopener noreferrer">
                                 <span className='clickeable'>Click Aqui!</span>

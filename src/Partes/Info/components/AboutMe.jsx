@@ -2,7 +2,7 @@ import './AboutMe.css'
 
 function AboutMe() {
     return (
-        <div className="my-6 mx-4 p-6 bg-[#FFD54F] border-4 border-[#201c1c] flex flex-col gap-4 h-fit font-bold">
+        <div className="md:my-6 md:mx-4 p-6 bg-[#FFD54F] border-y-4 md:border-4 border-[#201c1c] flex flex-col gap-4 h-fit font-bold">
             <div className="flex flex-col">
                 <p className="mb-4 text-base md:text-lg text-[#000000] font-bold">
                     <span className="bg-[#f30c5d] text-white px-2 py-1 mr-2 border-2 border-black">¡Hola!</span>
