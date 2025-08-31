@@ -1,7 +1,7 @@
 import SkillBox from "./SkillBox";
 
-import { FaHtml5, FaCss3Alt, FaJs, FaReact, FaNodeJs } from "react-icons/fa";
-import { SiNextdotjs, SiExpress, SiMongodb, SiFirebase, SiTypescript } from "react-icons/si";
+import { FaHtml5, FaCss3Alt, FaJs, FaReact, FaNodeJs, FaDatabase } from "react-icons/fa";
+import { SiNextdotjs, SiExpress, SiMongodb, SiFirebase, SiTypescript, SiMysql } from "react-icons/si";
 
 function Skills() {
     return (
@@ -12,13 +12,14 @@ function Skills() {
                     <SkillBox nombre="HTML" icon={<FaHtml5 className="text-black text-4xl" />} />
                     <SkillBox nombre="CSS" icon={<FaCss3Alt className="text-black text-4xl" />} />
                     <SkillBox nombre="JavaScript" icon={<FaJs className="text-black text-4xl" />} />
+                    <SkillBox nombre="TypeScript" icon={<SiTypescript className="text-black text-4xl" />} />
                     <SkillBox nombre="React" icon={<FaReact className="text-black text-4xl" />} />
                     <SkillBox nombre="Next.js" icon={<SiNextdotjs className="text-black text-4xl" />} />
                     <SkillBox nombre="Node.js" icon={<FaNodeJs className="text-black text-4xl" />} />
                     <SkillBox nombre="Express" icon={<SiExpress className="text-black text-4xl" />} />
+                    <SkillBox nombre="MySQL" icon={<SiMysql className="text-black text-4xl" />} />
                     <SkillBox nombre="MongoDB" icon={<SiMongodb className="text-black text-4xl" />} />
                     <SkillBox nombre="Firebase" icon={<SiFirebase className="text-black text-4xl" />} />
-                    <SkillBox nombre="TypeScript" icon={<SiTypescript className="text-black text-4xl" />} />
                 </div>
             </div>
         </>
