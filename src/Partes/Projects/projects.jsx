@@ -10,6 +10,7 @@ import Fakebook from '../../json/Proyectos/Fakebook.json';
 import BetterSID from '../../json/Proyectos/BetterSID.json';
 import Scrapers from '../../json/Proyectos/Scrapers.json';
 import BuscaProductores from '../../json/Proyectos/BuscaProductores.json';
+import LoginTest from '../../json/Proyectos/LoginTest.json';
 
 function projects() {
     return (
@@ -22,9 +23,11 @@ function projects() {
             <div className='flex flex-col m-2 gap-2'>
                 <ProjectBox data={BuscaProductores} />
                 <ProjectBox data={BetterSID} />
+                <ProjectBox data={LoginTest} />
                 <ProjectBox data={Fakebook} />
                 <ProjectBox data={UltraNoti} />
                 <ProjectBox data={Scrapers} />
+                
             </div>
         </div>
     )

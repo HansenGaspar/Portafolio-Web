@@ -1,0 +1,19 @@
+{
+    "Nombre": "Login Test",
+    "Descripcion": "Desarrollé un sistema de autenticación básico que incluye gestión de tokens y encriptación de contraseñas. El sistema utiliza MySQL para almacenar la información de los usuarios, incluyendo credenciales encriptadas y los bancos asociados a cada usuario, con detalles como nombre y saldo. Este proyecto se implementó como una demostración funcional, aunque finalmente no llegó a concretarse.",
+    "Tecnologias": [
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "Next.js",
+        "Tailwind css",
+        "MySql",
+        "Puppeteer",
+        "Tokens"
+    ],
+    "Imagenes": [
+        "sql-1.jpg",
+        "sql-2.jpg",
+        "sql-3.jpg"
+    ]
+}
