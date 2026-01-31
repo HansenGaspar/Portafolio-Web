@@ -19,40 +19,41 @@ import Bootcamp from '../../json/Estudios/Bootcamp.json';
 
 function personalInfo() {
 
-    const size = 50;
+    const size = 30;
 
     return (
         <div className="App mx-4">
             {/* Sección Sobre mí */}
             <div className="md:mb-8">
                 <H2Tittle>
-                    <span className="inline-flex items-center gap-2"><FaUser size={size} className="text-base" />Sobre mí</span>
+                    <span className="inline-flex items-center gap-2"><FaUser size={size} />Sobre mí</span>
                 </H2Tittle>
 
-                <div className="grid grid-cols-1 md:grid-cols-3 my-4 gap-4 items-start">
+                <div className="flex flex-col my-4 gap-4">
                     {/* About Me con más espacio */}
-                    <div className="md:col-span-2 flex flex-col">
+                    <div className="flex flex-col">
                         <AboutMe />
                     </div>
 
                     {/* Estudios alineado con About Me */}
-                    <div className="md:col-span-1 flex flex-col justify-center h-full bg-[#348aa7] border-y-4 md:border-4 border-[#201c1c]  p-4 md:m-0">
-                        <H3Tittle className="mb-2">
-                            <span className="inline-flex items-center gap-2"><FaGraduationCap size={size} className="text-base" />Estudios</span>
+                    <div className="flex flex-col h-full bg-[#348aa7] border-y-4 md:border-4 border-[#201c1c] p-4 md:m-4">
+                        <H3Tittle>
+                            <span className="inline-flex items-center gap-2"><FaGraduationCap size={size} />Estudios</span>
                         </H3Tittle>
-                        <div className="flex flex-col gap-2">
+                        <div className="flex flex-col md:flex-row gap-2">
                             <EstudyBox data={Facultad} />
                             <EstudyBox data={Liceo} />
                             <EstudyBox data={Bootcamp} />
                         </div>
                     </div>
                 </div>
+
             </div>
 
             {/* Sección Skills */}
             <div className="mb-8">
                 <H2Tittle>
-                    <span className="inline-flex items-center gap-2"><FaTools size={size} className="text-base" />Habilidades</span>
+                    <span className="inline-flex items-center gap-2"><FaTools size={size} />Habilidades</span>
                 </H2Tittle>
                 <Skills />
             </div>
@@ -60,7 +61,7 @@ function personalInfo() {
             {/* Sección Contacto */}
             <div className="mb-8">
                 <H2Tittle>
-                    <span className="inline-flex items-center gap-2"><FaEnvelope size={size} className="text-base" />Contacto</span>
+                    <span className="inline-flex items-center gap-2"><FaEnvelope size={size} />Contacto</span>
                 </H2Tittle>
                 <ContactMe />
             </div>

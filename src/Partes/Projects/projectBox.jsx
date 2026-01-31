@@ -6,7 +6,6 @@ import 'react-responsive-carousel/lib/styles/carousel.min.css';
 
 function ProjectBox({ data }) {
     const imgRef = useRef([]);
-    const [validImages, setValidImages] = useState([]);
     const [modalOpen, setModalOpen] = useState(false);
     const [modalImg, setModalImg] = useState(null);
 
@@ -42,14 +41,6 @@ function ProjectBox({ data }) {
     }
 
     //console.log(images.length);
-    // Solo mostrar imágenes que cargan correctamente
-    // Ordenar validImages por el número también
-    const sortByNumber = arr => [...arr].sort((a, b) => {
-        const numA = parseInt(a.match(/_(\d+)\./)?.[1] || '0', 10);
-        const numB = parseInt(b.match(/_(\d+)\./)?.[1] || '0', 10);
-        return numA - numB;
-    });
-    let imagesToShow = (validImages.length === images.length && images.length > 0) ? sortByNumber(validImages) : images;
 
     return (
         <div className="projectBox m-2 border-4 border-black relative overflow-visible mb-10">
@@ -58,10 +49,14 @@ function ProjectBox({ data }) {
                 <span className="tituloProyect  text-3xl text-[#E8E4CC] w-full text-center select-none">{data.Nombre}</span>
             </div>
 
-            <div className="flex flex-col md:flex-row gap-4 items-stretch ">
+            <div className="flex flex-col">
                 {/* Descripción */}
-                <div className="md:w-1/2 w-full flex flex-col justify-center p-2 pl-4">
-                    <p className='textProyect py-1 pb-5 font-bold'>{data.Descripcion}</p>
+                <div className="w-full flex flex-col justify-center p-2 pl-4">
+                    <div className='textProyect py-1 pb-5 font-bold'>
+                        {data.Descripcion.split('{aparte}').map((parrafo, idx) => (
+                            <p key={idx} className={idx > 0 ? 'mt-4' : ''}>{parrafo}</p>
+                        ))}
+                    </div>
                     <p className='textProyect p-2 bg-[#ffd44c] border-2 border-[#201C1C] font-medium'><span className='text-purple-700 resaltar font-normal '>Tecnologias - </span> {tecnologias}</p>
                     {data.Url && (
                         <p className='textProyect py-1 pt-5'>
@@ -75,13 +70,13 @@ function ProjectBox({ data }) {
 
 
                 {/* Carrusel solo si hay imágenes */}
-                {imagesToShow.length > 0 && (
-                    <div className="md:w-1/2 w-full flex items-center justify-center bg-[#201C1C] border-t-4 md:border-t-0 md:border-l-4 border-[#201C1C] p-0 m-0 min-h-56 md:min-h-80">
+                {images.length > 0 && (
+                    <div className="w-full border-t-4 border-[#201C1C]">
                         <Carousel
                             showThumbs={false}
                             infiniteLoop={true}
                             showStatus={false}
-                            className="w-full h-full custom-carousel flex-1"
+                            className="custom-carousel"
                             renderArrowPrev={(onClickHandler, hasPrev, label) =>
                                 hasPrev && (
                                     <button
@@ -126,10 +121,9 @@ function ProjectBox({ data }) {
                                 );
                             }}
                         >
-                            {imagesToShow.map((img, idx) => (
+                            {images.map((img, idx) => (
                                 <div
                                     key={idx}
-                                    className="w-full h-56 md:h-80 flex items-center justify-center bg-[#e8e4cc] rounded-none overflow-hidden cursor-zoom-in p-0 m-0"
                                     onClick={e => {
                                         e.stopPropagation();
                                         setModalImg(img);
@@ -140,13 +134,8 @@ function ProjectBox({ data }) {
                                         ref={el => imgRef.current[idx] = el}
                                         src={img}
                                         alt={`project-img-${idx}`}
-                                        className="object-cover w-full h-full rounded-none transition-all duration-300 pointer-events-none p-0 m-0"
-                                        onError={() => {
-                                            setValidImages(prev => prev.filter(i => i !== img));
-                                        }}
-                                        onLoad={() => {
-                                            setValidImages(prev => prev.includes(img) ? prev : [...prev, img]);
-                                        }}
+                                        className="w-full h-full  cursor-zoom-in"
+
                                     />
                                 </div>
                             ))}

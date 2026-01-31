@@ -1,6 +1,7 @@
 @import url('../../Fonts.css');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&display=swap');
 
 .TitleProyects{
-    font-family: 'Galindo';
+    font-family: 'Montserrat', sans-serif;
     color: #703c94;
 }

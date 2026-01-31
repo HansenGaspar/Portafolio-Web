@@ -18,7 +18,6 @@ function Skills() {
                     <SkillBox nombre="Node.js" icon={<FaNodeJs className="text-black text-4xl" />} />
                     <SkillBox nombre="Express" icon={<SiExpress className="text-black text-4xl" />} />
                     <SkillBox nombre="MySQL" icon={<SiMysql className="text-black text-4xl" />} />
-                    <SkillBox nombre="MongoDB" icon={<SiMongodb className="text-black text-4xl" />} />
                     <SkillBox nombre="Firebase" icon={<SiFirebase className="text-black text-4xl" />} />
                 </div>
             </div>

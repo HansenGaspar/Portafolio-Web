@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&display=swap');
+
 .projectBox {
     background-color: #f5f5dc;
 }
@@ -6,18 +8,45 @@
     font-family: 'Galindo';
 }
 .textProyect{
-    font-family: 'Dongle';
-    font-size: 2rem;
-    line-height: 2rem;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.1rem;
+    line-height: 1.6rem;
+    font-weight: 500;
 }
 
 .clickeable{
     cursor: pointer;
-    font-family: 'Galindo';
+    font-family: 'Montserrat', sans-serif;
     font-size: 1rem;
+    font-weight: 600;
+    text-decoration: underline;
+    transition: color 0.2s ease;
+}
+
+.clickeable:hover {
+    color: #1e40af;
 }
 
 .resaltar{
-    font-family: 'Galindo';
+    font-family: 'Montserrat', sans-serif;
     font-size: 1rem;
+    font-weight: 700;
+}
+
+/* Forzar que el carrusel ocupe toda la altura */
+.custom-carousel {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.custom-carousel .slider-wrapper {
+    flex: 1;
+}
+
+.custom-carousel .slider-wrapper,
+.custom-carousel .slider-wrapper .slider,
+.custom-carousel .slider-wrapper .slider .slide,
+.custom-carousel .slider-wrapper .slider .slide > div {
+    height: 100% !important;
 }
