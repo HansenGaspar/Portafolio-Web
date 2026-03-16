@@ -13,7 +13,7 @@ function ContactBox({data}) {
     return (
         <a
             href={data.Url}
-            className="m-2 p-2 border-4 border-[#201c1c] bg-[#f5f5dc] flex flex-row items-center gap-2 mx-auto transition duration-200 hover:bg-[#f30c5d] hover:text-white hover:shadow-lg cursor-pointer"
+            className="m-2 p-2 border-4 border-[#201c1c] bg-[#FFFDED] flex flex-row items-center gap-2 mx-auto  hover:bg-[#B6244F] hover:text-[#FFFDED] hover:shadow-lg cursor-pointer"
             target="_blank"
             rel="noopener noreferrer"
             style={{ textDecoration: 'none' }}

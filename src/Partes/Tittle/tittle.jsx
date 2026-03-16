@@ -3,9 +3,9 @@ import './tittleCss.css';
 
 function tittle() {
     return (
-        <div className=' text-center p-2 border-b-4 border-[#000000]  bg-[#201c1c]'>
+        <div className=' text-center p-2 border-b-4 border-[#201c1c]  bg-[#201c1c]'>
             <h1 className='Titulo text-6xl md:text-8xl'>El <AnimatedText /> Portafolio</h1>
-            <p className='Titulo text-3xl md:text-5xl '>de <span className='text-[#348AA7]'>Hansen Gaspar</span></p>
+            <p className='Titulo text-3xl md:text-5xl '>de <span className='text-[#FCE762]'>Hansen Gaspar</span></p>
         </div>
     )
 }

@@ -43,10 +43,10 @@ function ProjectBox({ data }) {
     //console.log(images.length);
 
     return (
-        <div className="projectBox m-2 border-4 border-black relative overflow-visible mb-10">
+        <div className="projectBox m-2 border-4 border-[#201c1c] relative overflow-visible mb-10">
 
-            <div className="h-14 bg-[#201C1C]   flex items-center justify-center">
-                <span className="tituloProyect  text-3xl text-[#E8E4CC] w-full text-center select-none">{data.Nombre}</span>
+            <div className="h-14 bg-[#201c1c]   flex items-center justify-center">
+                <span className="tituloProyect  text-3xl text-[#FFFDED] w-full text-center select-none">{data.Nombre}</span>
             </div>
 
             <div className="flex flex-col">
@@ -57,11 +57,11 @@ function ProjectBox({ data }) {
                             <p key={idx} className={idx > 0 ? 'mt-4' : ''}>{parrafo}</p>
                         ))}
                     </div>
-                    <p className='textProyect p-2 bg-[#ffd44c] border-2 border-[#201C1C] font-medium'><span className='text-purple-700 resaltar font-normal '>Tecnologias - </span> {tecnologias}</p>
+                    <p className='textProyect p-2 bg-[#FCE762] border-2 border-[#201c1c] font-medium'><span className='text-[#3a3434] resaltar font-normal '>Tecnologias - </span> {tecnologias}</p>
                     {data.Url && (
                         <p className='textProyect py-1 pt-5'>
-                            <span className='text-purple-700 resaltar'>Link: </span>
-                            <a href={data.Url} className='text-blue-500' target="_blank" rel="noopener noreferrer">
+                            <span className='text-[#3a3434] resaltar'>Link: </span>
+                            <a href={data.Url} className='text-[#3a3434]' target="_blank" rel="noopener noreferrer">
                                 <span className='clickeable'>Click Aqui!</span>
                             </a>
                         </p>
@@ -71,7 +71,7 @@ function ProjectBox({ data }) {
 
                 {/* Carrusel solo si hay imágenes */}
                 {images.length > 0 && (
-                    <div className="w-full border-t-4 border-[#201C1C]">
+                    <div className="w-full border-t-4 border-[#201c1c]">
                         <Carousel
                             showThumbs={false}
                             infiniteLoop={true}
@@ -83,7 +83,7 @@ function ProjectBox({ data }) {
                                         type="button"
                                         onClick={onClickHandler}
                                         title={label}
-                                        className="absolute left-2 top-1/2 z-10 bg-white border-2 border-black text-black rounded-full w-10 h-10 flex items-center justify-center shadow-lg hover:bg-black hover:text-white transition-colors duration-200 focus:outline-none"
+                                        className="absolute left-2 top-1/2 z-10 bg-[#FFFDED] border-2 border-[#201c1c] text-[#201c1c] rounded-full w-10 h-10 flex items-center justify-center shadow-lg hover:bg-[#201c1c] hover:text-[#FFFDED] transition-colors duration-200 focus:outline-none"
                                         style={{ transform: 'translateY(-50%)' }}
                                     >
                                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polyline points="15 18 9 12 15 6" /></svg>
@@ -96,7 +96,7 @@ function ProjectBox({ data }) {
                                         type="button"
                                         onClick={onClickHandler}
                                         title={label}
-                                        className="absolute right-2 top-1/2 z-10 bg-white border-2 border-black text-black rounded-full w-10 h-10 flex items-center justify-center shadow-lg hover:bg-black hover:text-white transition-colors duration-200 focus:outline-none"
+                                        className="absolute right-2 top-1/2 z-10 bg-[#FFFDED] border-2 border-[#201c1c] text-[#201c1c] rounded-full w-10 h-10 flex items-center justify-center shadow-lg hover:bg-[#201c1c] hover:text-[#FFFDED] transition-colors duration-200 focus:outline-none"
                                         style={{ transform: 'translateY(-50%)' }}
                                     >
                                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polyline points="9 6 15 12 9 18" /></svg>
@@ -109,8 +109,8 @@ function ProjectBox({ data }) {
                                         key={index}
                                         className={
                                             isSelected
-                                                ? "inline-block w-3 h-3 mx-1 rounded-full bg-black"
-                                                : "inline-block w-3 h-3 mx-1 rounded-full bg-black opacity-30 cursor-pointer"
+                                                ? "inline-block w-3 h-3 mx-1 rounded-full bg-[#201c1c]"
+                                                : "inline-block w-3 h-3 mx-1 rounded-full bg-[#201c1c] opacity-30 cursor-pointer"
                                         }
                                         onClick={onClick}
                                         aria-label={label}

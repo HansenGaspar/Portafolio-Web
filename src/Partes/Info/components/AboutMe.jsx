@@ -2,10 +2,10 @@ import './AboutMe.css'
 
 function AboutMe() {
     return (
-        <div className="md:my-6 md:mx-4 p-6 bg-[#FFD54F] border-y-4 md:border-4 border-[#201c1c] flex flex-col gap-4 h-fit font-bold">
+        <div className="md:my-6 md:mx-4 p-6 bg-[#FCE762] border-y-4 md:border-4 border-[#201c1c] flex flex-col gap-4 h-fit font-bold">
             <div className="flex flex-col">
-                <p className="mb-4 text-base md:text-lg text-[#000000] font-bold">
-                    ¡Hola! Soy Gaspar, <span className="text-[#7c3aed]">desarrollador full-stack</span>
+                <p className="mb-4 text-base md:text-lg text-[#201c1c] font-bold">
+                    ¡Hola! Soy Gaspar, desarrollador full-stack
                     <span className="ml-1">con bases solidas tanto en front-end como en back-end.</span>
                 </p>
 

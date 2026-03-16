@@ -36,7 +36,7 @@ function personalInfo() {
                     </div>
 
                     {/* Estudios alineado con About Me */}
-                    <div className="flex flex-col h-full bg-[#348aa7] border-y-4 md:border-4 border-[#201c1c] p-4 md:m-4">
+                    <div className="flex flex-col h-full bg-[#c6bebe] border-y-4 md:border-4 border-[#201c1c] p-4 md:m-4">
                         <H3Tittle>
                             <span className="inline-flex items-center gap-2"><FaGraduationCap size={size} />Estudios</span>
                         </H3Tittle>

@@ -2,7 +2,7 @@
 function SkillBox({ nombre, icon }) {
   return (
     <div
-      className="flex flex-col items-center justify-center bg-[#ffd44c] border-2 border-[#201c1c] shadow-lg"
+      className="flex flex-col items-center justify-center bg-[#FFFDED] border-2 border-[#201c1c] shadow-lg"
       style={{ width: 120, height: 140 }}
     >
 
